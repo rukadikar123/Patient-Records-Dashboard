@@ -7,7 +7,7 @@ const PatientSlice=createSlice({
     },
     reducers:{
         setPatients:(state,actions)=>{
-            state.patients(actions.payload)
+            state.patients=actions.payload
         }
     }
 })
