@@ -38,7 +38,7 @@ npm install
 npm start
 ```
 
-The app will run at [http://localhost:3000](http://localhost:3000).
+The app will run at [https://patient-records-dashboard-one.vercel.app/](https://patient-records-dashboard-one.vercel.app/).
 
 ## Project Structure
 
