@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setPatients } from "./Redux/PatientSlice";
 import { patientData } from "./MockData";
+import AddPatient from "./Pages/AddPatient";
 
 function App() {
 
@@ -23,6 +24,7 @@ let dispatch=useDispatch()
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/patients" element={<Patients />} />
+          <Route path="/add" element={<AddPatient />} />
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer/>
