@@ -53,7 +53,10 @@ src/
 
 ## Screenshots
 
-
+![Home Page](./src/assets/Homepage.png)
+![Add new patient Page](./src/assets/Add%20new%20patient.png)
+![Details Page](./src/assets/Details.png)
+![Patient list Page](./src/assets/Patient%20list.png)
 
 ## License
 
