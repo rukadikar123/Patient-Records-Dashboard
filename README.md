@@ -1,18 +1,63 @@
-# React + Vite
+# Jarurat Care - Patient Records Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple patient records dashboard built with **React**, **Redux**, and **Tailwind CSS**. Easily manage, view, and add patient records with a clean and responsive UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🏠 **Home Page:** Welcome screen with quick navigation.
+- 👨‍⚕️ **Patients List:** View all patients, search by name, and see details in a modal.
+- ➕ **Add Patient:** Add new patient records via a simple form.
+- ℹ️ **About Page:** Learn about the project and technologies used.
+- 🖥️ **Responsive Design:** Works well on desktop and mobile devices.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- [React](https://reactjs.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [React Router](https://reactrouter.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-Note: This will impact Vite dev & build performances.
+## Getting Started
 
-## Expanding the ESLint configuration
+### 1. Clone the repository
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/rukadikar123/Patient-Records-Dashboard.git
+cd Patient-Records-Dashboard
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development server
+
+```bash
+npm start
+```
+
+The app will run at [http://localhost:3000](http://localhost:3000).
+
+## Project Structure
+
+```
+src/
+  Components/      # Reusable UI components (Navbar, Footer, PatientCard, etc.)
+  Pages/           # Main pages (Home, Patients, AddPatient, About)
+  Redux/           # Redux store and slices
+  MockData.js      # Sample patient data
+  App.jsx          # Main app component with routes
+```
+
+## Screenshots
+
+
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
