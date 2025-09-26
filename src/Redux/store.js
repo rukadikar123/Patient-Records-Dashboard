@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import PatientReducer from "./PatientSlice"
+import PatientReducer from "./PatientSlice";
 
- const store=configureStore({
-    reducer:{
-        Patient:PatientReducer
-    }
-})
+// Create the Redux store
+const store = configureStore({
+  reducer: {
+    Patient: PatientReducer, // This key will be used in useSelector to access state.Patient
+  },
+});
 
-export default store
+// Export the store to provide it to the React app
+export default store;

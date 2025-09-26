@@ -4,6 +4,7 @@ import { addNewPatient } from "../Redux/PatientSlice";
 import { useNavigate } from "react-router-dom";
 
 function AddPatient() {
+  // Local state for form inputs
   const [formData, setFormData] = useState({
     name: "",
     age: "",
@@ -11,29 +12,32 @@ function AddPatient() {
     address: "",
   });
 
-  let navigate=useNavigate()
-  let dispatch = useDispatch();
+  let navigate = useNavigate(); // Hook to programmatically navigate to another route
+  let dispatch = useDispatch(); // Hook to dispatch Redux actions
 
+  // Handles input changes for all fields
   const handleChange = (e) => {
     const { value, name } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  // Handles form submission
   const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(addNewPatient({...formData,id:Date.now()}));
+    e.preventDefault(); // Prevent default page reload on form submit
+    dispatch(addNewPatient({ ...formData, id: Date.now() })); // Dispatch the action to add a new patient, adding a unique id
+    // Reset the form fields after submission
     setFormData({
       name: "",
       age: "",
       contact: "",
       address: "",
     });
-    navigate('/patients')
-
+    navigate("/patients"); // Navigate to /patients page after adding
   };
 
   return (
     <>
+      {/* Centered form container */}
       <div className="min-h-screen flex items-center justify-center">
         <form
           onSubmit={handleSubmit}
@@ -42,7 +46,7 @@ function AddPatient() {
           <h2 className="text-xl text-center font-semibold text-gray-800">
             Add New Patient
           </h2>
-
+          {/* Input for patient name */}
           <input
             type="text"
             name="name"
@@ -52,7 +56,7 @@ function AddPatient() {
             className="w-full px-3 py-2 border rounded-md outline-none"
             required
           />
-
+          {/* Input for patient age */}
           <input
             type="number"
             name="age"
@@ -62,7 +66,7 @@ function AddPatient() {
             className="w-full px-3 py-2 border rounded-md outline-none"
             required
           />
-
+          {/* Input for patient contact */}
           <input
             type="text"
             name="contact"
@@ -72,7 +76,7 @@ function AddPatient() {
             className="w-full px-3 py-2 border rounded-md outline-none"
             required
           />
-
+          {/* Input for patient address */}
           <input
             type="text"
             name="address"
@@ -81,7 +85,7 @@ function AddPatient() {
             placeholder="Address"
             className="w-full px-3 py-2 border rounded-md outline-none"
           />
-
+          {/* Submit button */}
           <button
             type="submit"
             className="w-full bg-blue-500 text-white py-2 rounded-md cursor-pointer hover:bg-blue-600"

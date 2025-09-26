@@ -10,24 +10,28 @@ import { setPatients } from "./Redux/PatientSlice";
 import { patientData } from "./MockData";
 import AddPatient from "./Pages/AddPatient";
 
+// Main App component
 function App() {
+  let dispatch = useDispatch(); // Redux dispatch function
 
-let dispatch=useDispatch()
-
-  useEffect(()=>{
-      dispatch(setPatients(patientData))
-  },[dispatch])
+  // useEffect to initialize the Redux state with mock patient data
+  useEffect(() => {
+    dispatch(setPatients(patientData)); // Load initial patient data into Redux store
+  }, [dispatch]);
 
   return (
     <>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/patients" element={<Patients />} />
-          <Route path="/add" element={<AddPatient />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-        <Footer/>
+      {/* Navbar displayed on all pages */}
+      <Navbar />
+      {/* Define all routes */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/patients" element={<Patients />} />
+        <Route path="/add" element={<AddPatient />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      {/* Footer displayed on all pages */}
+      <Footer />
     </>
   );
 }
